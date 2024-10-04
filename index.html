@@ -6,58 +6,6 @@
     <title>Document</title>
 </head>
 <body>
-    <script>
-        const products = [
-  {id: 1, title: "Fjallraven - Foldsack No. 1 Backpack, Fits 15 Laptops", price: 109.95, description: "Your perfect pack for everyday use and walks in the forest.", category: "men's clothing"},
-  {id: 2, title: "Mens Casual Premium Slim Fit T-Shirts", price: 22.3, description: "Slim-fitting style, lightweight & soft fabric.", category: "men's clothing"},
-  {id: 3, title: "Mens Cotton Jacket", price: 55.99, description: "Great outerwear jackets for Spring/Autumn/Winter.", category: "men's clothing"},
-  {id: 9, title: "WD 2TB Elements Portable External Hard Drive - USB 3.0", price: 64, description: "USB 3.0 and USB 2.0 Compatibility Fast data transfers.", category: "electronics"},
-  {id: 10, title: "SanDisk SSD PLUS 1TB Internal SSD - SATA III 6 Gb/s", price: 109, description: "Easy upgrade for faster boot up and shutdown.", category: "electronics"},
-  {id: 13, title: "Acer SB220Q bi 21.5 inches Full HD Monitor", price: 599, description: "21.5 inches Full HD widescreen IPS display.", category: "electronics"},
-  {id: 15, title: "BIYLACLESEN Women's 3-in-1 Snowboard Jacket Winter Coats", price: 56.99, description: "3 in 1 Detachable Design suitable for different seasons, waterproof.", category: "women's clothing"},
-  {id: 17, title: "Rain Jacket Women Windbreaker Striped Climbing Raincoats", price: 39.99, description: "Long sleeve with hooded, waterproof raincoat.", category: "women's clothing"},
-  {id: 20, title: "DANVOUY Womens T Shirt Casual Cotton Short", price: 12.99, description: "Casual, Short Sleeve, Letter Print.", category: "women's clothing"}
-];
-
-// 1. Filter and Map: Get all product titles of products with a price greater than $50
-const titlesPriceAbove50 = products
-  .filter(product => product.price > 50)
-  .map(product => product.title);
-
-console.log(titlesPriceAbove50);
-// Output: ["Fjallraven - Foldsack No. 1 Backpack, Fits 15 Laptops", "Mens Cotton Jacket", "WD 2TB Elements Portable External Hard Drive - USB 3.0", "SanDisk SSD PLUS 1TB Internal SSD - SATA III 6 Gb/s", "Acer SB220Q bi 21.5 inches Full HD Monitor", "BIYLACLESEN Women's 3-in-1 Snowboard Jacket Winter Coats"]
-
-// 2. Sort and Find: Find the first product with a category of "electronics" after sorting products by price
-const firstElectronicsProduct = products
-  .sort((a, b) => a.price - b.price)
-  .find(product => product.category === "electronics");
-
-console.log(firstElectronicsProduct);
-// Output: {id: 9, title: "WD 2TB Elements Portable External Hard Drive - USB 3.0", price: 64, description: "USB 3.0 and USB 2.0 Compatibility Fast data transfers.", category: "electronics"}
-
-// 3. Map and Join: Join all product descriptions into a single string separated by commas
-const allDescriptionsJoined = products
-  .map(product => product.description)
-  .join(", ");
-
-console.log(allDescriptionsJoined);
-// Output: "Your perfect pack for everyday use and walks in the forest., Slim-fitting style, lightweight & soft fabric., Great outerwear jackets for Spring/Autumn/Winter., USB 3.0 and USB 2.0 Compatibility Fast data transfers., Easy upgrade for faster boot up and shutdown., 21.5 inches Full HD widescreen IPS display., 3 in 1 Detachable Design suitable for different seasons, waterproof., Long sleeve with hooded, waterproof raincoat., Casual, Short Sleeve, Letter Print."
-
-// 4. Filter and Reduce: Calculate the total price of all products with a category of "women's clothing"
-const totalPriceWomensClothing = products
-  .filter(product => product.category === "women's clothing")
-  .reduce((total, product) => total + product.price, 0);
-
-console.log(totalPriceWomensClothing);
-// Output: 109.97
-
-// 5. Search and Filter: Find all products with "waterproof" in the description and filter them by price greater than $20
-const waterproofProductsAbove20 = products
-  .filter(product => product.description.toLowerCase().includes("waterproof") && product.price > 20);
-
-console.log(waterproofProductsAbove20);
-// Output: [{id: 15, title: "BIYLACLESEN Women's 3-in-1 Snowboard Jacket Winter Coats", price: 56.99, ...}, {id: 17, title: "Rain Jacket Women Windbreaker Striped Climbing Raincoats", price: 39.99, ...}]
-
-    </script>
+    <a href="./day1.html">Array Methods</a>
 </body>
 </html>
